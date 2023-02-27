@@ -55,8 +55,8 @@ import axios from "axios";
              <h2 className="font-bold text-xl text-[#b61c1a] underline text-center">Latest News</h2>
        {
       update.map((update)=>(
-          <div className="w-[350px] text-[#fff8ea] sm:w-[400px] md:w-[500px]">
-      <h1 className='font-semibold text-sm px-3 '>{update.Text}</h1>
+          <div className="w-[350px] text-[#b61c1a] sm:w-[400px] md:w-[500px]">
+      <h1 className='font-semibold text-sm text-center'>{update.Text}</h1>
       
           </div>
         ))
