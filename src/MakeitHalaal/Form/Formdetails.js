@@ -12,8 +12,7 @@ function Formdetails() {
   const [AcctNo, setAcctNo] = useState("")
   const [Shortnote, setShortnote] = useState("")
   const [Whatsapp, setWhatsapp] = useState("")
-  const [filenameID, setFileNameID]= useState("")
-  const [filenameJamb, setFileNameJamb]= useState("")
+  const [IDcardImage, setIDcardimag]= useState("")
 
   const navigate = useNavigate();
   
@@ -23,7 +22,7 @@ function Formdetails() {
      
     
 
-    axios.post("http://localhost:4000/api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,filenameID,filenameJamb})
+    axios.post("http://localhost:4000/api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,IDcardImage})
     .then((res)=>
     { 
     console.log("saved succesfully")
@@ -99,15 +98,11 @@ const OnchangeShortnote =(e)=> {
  const OnchangefileID = async (e) => { 
   const file = e.target.files[0];
   const base64 = await convertBase64(file)
-  setFileNameID(base64);
+  setIDcardimag(base64);
  }
 
- const OnchangefileJamb = async (e) => { 
-  const file = e.target.files[0];
-  const base64 = await convertBase64(file)
-  setFileNameJamb(base64);
- }
-console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote)
+
+console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote, )
   return (
     <div>
        
@@ -148,11 +143,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote)
                     
                      
                    
-                <label className=" text-[#fff8ea]  pt-5 py-1 ">Jamb Admissioon Letter</label>
-                <input  htmlFor="file" type="file" onChange={OnchangefileJamb} name="Jambimage"
-                className=" border-[#0b0f11] focus:outline-0 sm:w-[400px]
-                 border-2 w-[250px] rounded-lg px-3 text-[#0a0a08]"/>
-                
+               
           
                 <label className=" text-[#fff8ea] pt-5 text-xl font-semibold py-1 ">Whatsapp Number</label>
                 <input value={Whatsapp} onChange={Onchangewhatsapp} type="Number"
