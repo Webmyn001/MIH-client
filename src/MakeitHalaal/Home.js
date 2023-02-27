@@ -11,7 +11,7 @@ import axios from "axios";
     const [date, setDate] = useState(new Date())
     const [update, setUpdate] =useState([])
     const getUpdate = async ()=> {
-      axios.get("http://localhost:4000/api/updates/getupdates")
+      axios.get("https://repulsive-threads-foal.cyclic.app/api/updates/getupdates")
       .then((res)=> setUpdate(res.data))
       .catch((err)=> console.log(err))
     }
