@@ -22,7 +22,7 @@ function Formdetails() {
      
     
 
-    axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,IDcardImage})
+    axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,IDcardImage,images})
     .then((res)=>
     { 
     console.log("saved succesfully")
