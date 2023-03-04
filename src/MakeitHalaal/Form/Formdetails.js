@@ -13,7 +13,7 @@ function Formdetails() {
   const [Shortnote, setShortnote] = useState("")
   const [Whatsapp, setWhatsapp] = useState("")
   const [images, setImages]= useState("")
-  const [loading, setloading] = useState(false)
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
   
 
@@ -58,7 +58,7 @@ function Formdetails() {
 
    //loading
  const Load =()=> {
- setloading(true)
+ setLoading(true)
   }
 
    // conversion of image to base64
