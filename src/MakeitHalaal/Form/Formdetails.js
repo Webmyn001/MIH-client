@@ -36,7 +36,7 @@ function Formdetails() {
   
 
      })
-    setloading(false)
+    setLoading(false)
     }
 
     useEffect(()=>{
