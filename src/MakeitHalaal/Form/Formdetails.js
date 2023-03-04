@@ -98,7 +98,7 @@ const OnchangeShortnote =(e)=> {
  const OnchangefileID = async (e) => { 
    const files = Array.from(e.target.files)
        
-if (images.length === 1 || images.length=== 0 ) {
+if (images.length === 1 && images.length=== 0 ) {
   setImages("")
    alert("please upload two images School ID card and Jamb Admission Letter")
    }else{
