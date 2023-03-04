@@ -13,13 +13,13 @@ function Formdetails() {
   const [Shortnote, setShortnote] = useState("")
   const [Whatsapp, setWhatsapp] = useState("")
   const [images, setImages]= useState("")
-
+  const [loading, setloading] = useState(false)
   const navigate = useNavigate();
   
 
   const saveForm = async (e) => {
     e.preventDefault();
-     
+     setloading(true)
      
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
@@ -27,13 +27,14 @@ function Formdetails() {
     console.log("saved succesfully")
     navigate("/");
     alert("Thank you , form succesfully submitted , we will get back to you on Whatsapp ")
+   
   }).catch((err)=> {
       console.log(err)
       alert("Unable to submit form, kindly complete the form or ensure you are connected to the Internet.")
   
 
      })
-    
+    setloading(false)
     }
 
     useEffect(()=>{
@@ -178,7 +179,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                 
                 <div className="flex items-center justify-center gap-x-5 py-7  pb-0">
                  <div className=''>
-                     <button className="bg-[#1048a9] rounded-md px-3 py-2">Submit</button>
+                     <button className="bg-[#1048a9] rounded-md px-3 py-2">{loading ? "Please Wait...":"Submit"}</button>
                  </div>
                </div>  
 
