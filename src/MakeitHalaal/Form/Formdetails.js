@@ -20,7 +20,9 @@ function Formdetails() {
   const saveForm = async (e) => {
     e.preventDefault();
      
-    
+      if (images.length === 0) {
+   return alert("please upload two images School ID card and Jamb Admission Letter")
+   }
 
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
@@ -32,9 +34,7 @@ function Formdetails() {
       console.log(err)
       alert("Unable to submit form, kindly complete the form or ensure you are connected to the Internet.")
   
-  if (images.length === 0) {
-   alert("please upload two images School ID card and Jamb Admission Letter")
-   }
+
      })
     
     
