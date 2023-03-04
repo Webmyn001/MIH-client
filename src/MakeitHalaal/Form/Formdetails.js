@@ -13,13 +13,14 @@ function Formdetails() {
   const [Shortnote, setShortnote] = useState("")
   const [Whatsapp, setWhatsapp] = useState("")
   const [images, setImages]= useState("")
-  const [loading, setloading] = useState(false)
+  const [loading, setloading] = useState(true)
   const navigate = useNavigate();
   
 
   const saveForm = async (e) => {
+    setloading(false)
     e.preventDefault();
-     setloading(true)
+     
      
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
@@ -34,7 +35,7 @@ function Formdetails() {
   
 
      })
-    setloading(false)
+    setloading(true)
     }
 
     useEffect(()=>{
