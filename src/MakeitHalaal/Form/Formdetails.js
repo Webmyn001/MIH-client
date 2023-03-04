@@ -13,18 +13,19 @@ function Formdetails() {
   const [Shortnote, setShortnote] = useState("")
   const [Whatsapp, setWhatsapp] = useState("")
   const [images, setImages]= useState("")
-  const [loading, setloading] = useState(true)
+  const [loading, setloading] = useState(false)
   const navigate = useNavigate();
   
 
   const saveForm = async (e) => {
-    setloading(false)
+    
     e.preventDefault();
      
      
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
     { 
+  setloading(true)
     console.log("saved succesfully")
     navigate("/");
     alert("Thank you , form succesfully submitted , we will get back to you on Whatsapp ")
@@ -35,7 +36,7 @@ function Formdetails() {
   
 
      })
-    setloading(true)
+    setloading(false)
     }
 
     useEffect(()=>{
