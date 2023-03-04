@@ -33,6 +33,8 @@ function Formdetails() {
       alert("Unable to submit form, kindly complete the form or ensure you are connected to the Internet.")
     })
     
+        if (images.length === 0) return toast.error('Please upload images.')
+
      
   }
   
