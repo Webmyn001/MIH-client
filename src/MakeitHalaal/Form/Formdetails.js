@@ -33,7 +33,9 @@ function Formdetails() {
       alert("Unable to submit form, kindly complete the form or ensure you are connected to the Internet.")
     })
     
-        if (images.length === 0) return toast.error('Please upload image.')
+        if (images.length === 0) {
+   alert("please upload two images School ID card and Jamb Admission Letter")
+   }
 
      
   }
