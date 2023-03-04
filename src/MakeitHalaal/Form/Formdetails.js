@@ -22,8 +22,7 @@ function Formdetails() {
      
       if (images.length === 0) {
    return alert("please upload two images School ID card and Jamb Admission Letter")
-   }
-
+   }else {
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
     { 
@@ -37,10 +36,8 @@ function Formdetails() {
 
      })
     
-    
-
-     
-  }
+     }
+}
   
     useEffect(()=>{
        axios.get("http://localhost:4000/api/lessons/").then((res)=>{
