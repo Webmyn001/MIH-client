@@ -25,7 +25,7 @@ function Formdetails() {
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
     { 
-  setloading(true)
+  
     console.log("saved succesfully")
     navigate("/");
     alert("Thank you , form succesfully submitted , we will get back to you on Whatsapp ")
@@ -56,6 +56,10 @@ function Formdetails() {
 
    },[])
 
+   //loading
+ const Load =()=> {
+ setloading(true)
+  }
 
    // conversion of image to base64
 
@@ -182,7 +186,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                 <div className="flex items-center justify-center gap-x-5 py-7  pb-0">
                  <div className=''>
                   {loading ? <button className="bg-red-500 text-white rounded-md px-3 py-2">Please Wait ...</button>:
-                 <button className="bg-[#1048a9] rounded-md px-3 py-2">Submit</button>}
+                 <button className="bg-[#1048a9] rounded-md px-3 py-2" onClick={Load}>Submit</button>}
                  </div>
                </div>  
 
