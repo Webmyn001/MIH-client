@@ -187,7 +187,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                 
                 <div className="flex items-center justify-center gap-x-5 py-7  pb-0">
                  <div className=''>
-                 {loading ? <h2>please wait....</h2>: <button className="bg-[#1048a9] rounded-md px-3 py-2 " onClick={Load}>Submit</button>}
+                 <button className="bg-[#1048a9] rounded-md px-3 py-2 " onClick={Load}>{loading ? "please wait": "Submit"}</button>
                  </div>
                </div>  
 
