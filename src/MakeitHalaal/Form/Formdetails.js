@@ -20,12 +20,12 @@ function Formdetails() {
   const saveForm = async (e) => {
     
     e.preventDefault();
-     alert("Please wait, ")
+     
 
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
     { 
-  
+     alert(" please wait")
     console.log("saved succesfully")
     navigate("/");
     alert("Thank you , form succesfully submitted , we will get back to you on Whatsapp ")
