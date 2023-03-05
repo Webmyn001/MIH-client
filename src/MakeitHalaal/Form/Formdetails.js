@@ -57,10 +57,8 @@ function Formdetails() {
 
    //loading
  const Load =()=> {
- 
- alert("Please wait while your request is been processed ")
-      setInterval(()=>setLoading(true), 5000)
-  }
+      alert("Please wait while your request is been processed ")
+    }
 
    // conversion of image to base64
 
@@ -138,24 +136,24 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                 
                 <label className=" font-semibold text-[#fff8ea] pt-3 text-xl py-1 ">Name </label>
                 <input placeholder="Abdul-Rahman Faruq"  value={Name} onChange={Onchangename}
-                className=" border-[#0b0f11] focus:outline-0 border-2 sm:w-[400px] rounded-lg px-3 text-[#594545]"/>
+                className=" border-[#0b0f11] focus:outline-0 border-2 sm:w-[400px] rounded-lg px-3 text-[#594545]" required/>
                 
                 <label className="font-semibold pt-3 text-[#fff8ea] text-xl py-1 ">School</label>
                 <input placeholder="University Of Ibadan" value={School} onChange={Onchangeschool}
-                className=" border-[#0b0f11] focus:outline-0 border-2 mb-3 sm:w-[400px] rounded-lg px-3 text-[#594545]"/>
+                className=" border-[#0b0f11] focus:outline-0 border-2 mb-3 sm:w-[400px] rounded-lg px-3 text-[#594545]" required/>
 
                 <h1 className='pt-5 font-semibold text-[#fff8ea] text-xl'>Accounts Details</h1>
                 <label className="  text-[#fff8ea] pt-3 py-1 ">Bank Name</label>
                 <input placeholder="First Bank" value={BankName} onChange={OnchangeBankname}
-                className=" border-[#0b0f11] text-[#20201f] focus:outline-0 border-2 sm:w-[400px] rounded-lg px-3 "/>
+                className=" border-[#0b0f11] text-[#20201f] focus:outline-0 border-2 sm:w-[400px] rounded-lg px-3 " required/>
                 <label className=" text-[#fff8ea]  py-1 ">Account Name</label>
                 <input  value={AcctName} onChange={OnchangeAcctName}
                 className=" border-[#0b0f11] focus:outline-0 border-2
-                 sm:w-[400px] rounded-lg px-3 text-[#0e0d0c]" placeholder="Abdul-Rahman Faruq" />
+                 sm:w-[400px] rounded-lg px-3 text-[#0e0d0c]" placeholder="Abdul-Rahman Faruq" required />
                 <label className=" text-[#fff8ea] py-1 ">Account Number</label>
                 <input  value={AcctNo} onChange={OnchangeAcctNo} type="Number"
                 className=" border-[#0b0f11] focus:outline-0
-                 border-2 sm:w-[400px] rounded-lg px-3 text-[#141311]"placeholder="0123456789" />
+                 border-2 sm:w-[400px] rounded-lg px-3 text-[#141311]"placeholder="0123456789" required />
 
 
 
@@ -163,10 +161,10 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
 
 
                 <h1 className='pt-5 text-[#fff8ea] font-semibold text-xl'>Proof Of Studentship</h1>
-               <label htmlFor='file'  className=" text-xs text-[#fff8ea] py-1 ">kindly upload your School ID card and Jamb Admission Letter</label>
+               <label htmlFor='file'  className=" text-xs text-[#fff8ea] py-1 ">kindly select two images, your School ID card and Jamb Admission Letter</label>
                 <input  type='file'  name='images' onChange={OnchangefileID}
                 className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] w-[250px] border-2 rounded-lg px-3 text-[#0f0e0c]" multiple />
+                sm:w-[400px] w-[250px] border-2 rounded-lg px-3 text-[#0f0e0c]" multiple required/>
                     
                      
                    
@@ -175,18 +173,18 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                 <label className=" text-[#fff8ea] pt-5 text-xl font-semibold py-1 ">Whatsapp Number</label>
                 <input value={Whatsapp} onChange={Onchangewhatsapp} type="Number"
                 className=" border-[#0b0f11] focus:outline-0 border-2 
-                sm:w-[400px] rounded-lg px-3 text-[#0f0f0d]" placeholder="08100000000" />
+                sm:w-[400px] rounded-lg px-3 text-[#0f0f0d]" placeholder="08100000000" required />
 
                 
 
                 <label className="italic text-[#fff8ea] pt-5 font-semibold py-1 ">Write a short note to proof that you truely need it.</label>
                 <textarea placeholder="Write a short note ..... "  value={Shortnote} onChange={OnchangeShortnote} 
-                className= " border-[#0b0f11] focus:outline-0 w-[250px] h-[100px] border-2 rounded-lg px-3 text-[#594545]"/>
+                className= " border-[#0b0f11] focus:outline-0 w-[250px] h-[100px] border-2 rounded-lg px-3 text-[#594545]" required/>
                 
                 
                 <div className="flex items-center justify-center gap-x-5 py-7  pb-0">
                  <div className=''>
-                 <button className="bg-[#1048a9] rounded-md px-3 py-2 " onClick={Load}>{loading ? "please waiting.": "Submit"}</button>
+                 <button className="bg-[#1048a9] rounded-md px-3 py-2 " onClick={Load}>Submit</button>
                  </div>
                </div>  
 
