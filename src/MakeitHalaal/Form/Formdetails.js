@@ -33,10 +33,9 @@ function Formdetails() {
   }).catch((err)=> {
       console.log(err)
       alert("Unable to submit form, kindly complete the form or ensure you are connected to the Internet.")
-  
-
+      
      })
-    setLoading(false)
+    
     }
 
     useEffect(()=>{
@@ -60,7 +59,7 @@ function Formdetails() {
  const Load =()=> {
  
  alert("Please wait while your request is been processed ")
-      setLoading(true)
+      setInterval(()=>setLoading(true), 5000)
   }
 
    // conversion of image to base64
@@ -107,7 +106,7 @@ const OnchangeShortnote =(e)=> {
  const OnchangefileID = async (e) => { 
    const files = Array.from(e.target.files)
        
-if (e.target.files.length === 1 ) {
+if (e.target.files.length < 2 ) {
   setImages(null)
    alert("please upload two images School ID card and Jamb Admission Letter")
    }else{
@@ -167,7 +166,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
                <label htmlFor='file'  className=" text-xs text-[#fff8ea] py-1 ">kindly upload your School ID card and Jamb Admission Letter</label>
                 <input  type='file'  name='images' onChange={OnchangefileID}
                 className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] w-[250px] border-2 rounded-lg px-3 text-[#0f0e0c]" multiple required/>
+                sm:w-[400px] w-[250px] border-2 rounded-lg px-3 text-[#0f0e0c]" multiple />
                     
                      
                    
