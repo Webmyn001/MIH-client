@@ -20,8 +20,8 @@ function Formdetails() {
   const saveForm = async (e) => {
     
     e.preventDefault();
-     setLoading(true)
-     
+     alert("Please wait, ")
+
     axios.post("https://repulsive-threads-foal.cyclic.app//api/lessons/add", {Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images})
     .then((res)=>
     { 
@@ -36,7 +36,7 @@ function Formdetails() {
   
 
      })
-    setLoading(false)
+    
     }
 
     useEffect(()=>{
