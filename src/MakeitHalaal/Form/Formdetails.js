@@ -36,7 +36,7 @@ function Formdetails() {
   
 
      })
-    
+    setLoading(false)
     }
 
     useEffect(()=>{
@@ -59,7 +59,8 @@ function Formdetails() {
    //loading
  const Load =()=> {
  
- alert("Please wait, ")
+ alert("Please wait while your request is been processed ")
+      setLoading(true)
   }
 
    // conversion of image to base64
