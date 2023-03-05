@@ -28,7 +28,7 @@ function Formdetails() {
      
     console.log("saved succesfully")
     navigate("/");
-    alert("Thank you , form succesfully submitted , we will get back to you on Whatsapp ")
+    alert("Thank you, Form succesfully submitted, We will get back to you on Whatsapp. ")
    
   }).catch((err)=> {
       console.log(err)
