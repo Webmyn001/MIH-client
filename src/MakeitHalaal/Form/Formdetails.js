@@ -106,7 +106,7 @@ const OnchangeShortnote =(e)=> {
        
 if (e.target.files.length < 2 ) {
   setImages(null)
-   alert("please upload two images School ID card and Jamb Admission Letter")
+   alert("please select two images, your School ID card and Jamb Admission Letter")
    }else{
         setImages([]);
         files.forEach(file => {
@@ -161,7 +161,7 @@ console.log(Name,School,BankName,AcctName,AcctNo,Whatsapp,Shortnote,images )
 
 
                 <h1 className='pt-5 text-[#fff8ea] font-semibold text-xl'>Proof Of Studentship</h1>
-               <label htmlFor='file'  className=" text-xs text-[#fff8ea] py-1 ">kindly select two images, your School ID card and Jamb Admission Letter</label>
+               <label htmlFor='file'  className=" text-xs text-[#fff8ea] py-1 ">kindly upload your School ID card and Jamb Admission Letter</label>
                 <input  type='file'  name='images' onChange={OnchangefileID}
                 className=" border-[#0b0f11] focus:outline-0 
                 sm:w-[400px] w-[250px] border-2 rounded-lg px-3 text-[#0f0e0c]" multiple required/>
