@@ -61,13 +61,13 @@ import axios from "axios";
           </div>
         ))
       }
-         <h2 className="pt-4 text-xl">If you are intrested in the program 
+         <h2 className="pt-4 text-base">If you are intrested in the program 
            kindly <Link to="/form"> <button className="text-[#1048a9] font-bold">Click here</button></Link> to 
            fill in the required information.
             </h2>
 
             
-           <h2 className="pt-4 text-xl">For more information about the program or financial assistance 
+           <h2 className="pt-4 text-base">For more information about the program or financial assistance 
            kindly <Link to="/contact"> <button className="text-[#1048a9] font-bold">Contact us.</button></Link> 
             </h2>
           
