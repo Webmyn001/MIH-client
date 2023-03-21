@@ -56,7 +56,7 @@ import axios from "axios";
        {
       update.map((update)=>(
           <div className="w-[300px] text-[#b61c1a] sm:w-[400px] text-center md:w-[500px] ">
-      <h1 className='font-semibold text-xl animate-pulse pb-[50px] text-center'>{update.Text}</h1>
+      <h1 className='font-semibold text-xl animate-pulse pb-[15px] text-center'>{update.Text}</h1>
       
           </div>
         ))
