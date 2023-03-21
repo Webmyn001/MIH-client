@@ -52,11 +52,11 @@ import axios from "axios";
               to asist students all over Nigeria Institution 
              to reduce suffering during Ramadan.
            
-             <h2 className="font-bold text-xl text-[#b61c1a] underline text-center">Latest News</h2>
+             <h2 className="font-bold text-xl text-[#b61c1a] underline pt-[100px] text-center">Latest News</h2>
        {
       update.map((update)=>(
-          <div className="w-[300px] text-[#b61c1a] sm:w-[400px] text-center md:w-[500px] py-[100px]">
-      <h1 className='font-semibold text-xl animate-pulse text-center'>{update.Text}</h1>
+          <div className="w-[300px] text-[#b61c1a] sm:w-[400px] text-center md:w-[500px] ">
+      <h1 className='font-semibold text-xl animate-pulse pb-[100px] text-center'>{update.Text}</h1>
       
           </div>
         ))
